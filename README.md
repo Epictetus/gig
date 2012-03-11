@@ -1,7 +1,7 @@
 Gig
 ===
-Gig is a Java application framework including the full-stack runtime and toolkit 
-which is developed by Eiichiro Uchiumi and can be performed on JDK 6 or later. 
+Gig is a Java application framework developed by Eiichiro Uchiumi which is 
+including the full-stack runtime and toolkit can be performed on JDK 6 or later. 
 Gig offers a full set of development tools to build, deploy and maintain your 
 Java applications more easily, quickly and safely.
 
