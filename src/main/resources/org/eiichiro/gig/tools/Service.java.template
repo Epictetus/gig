@@ -1,0 +1,63 @@
+package ${entity.package};
+
+import static org.eiichiro.acidhouse.metamodel.Metamodels.*;
+
+import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.eiichiro.acidhouse.DatastoreSession;
+import org.eiichiro.gig.Service;
+import org.eiichiro.gig.Transactional;
+import org.eiichiro.jazzmaster.inject.Inject;
+${key.import}
+@Generated("org.eiichiro.gig.tools.ScaffoldGenerator")
+@Service
+public class ${entity.class}Service {
+
+	@Inject private DatastoreSession session;
+	
+	public ${entity.class} get(${key.class} ${key.name}) {
+		${entity.class} entity = session.get(${entity.class}.class, ${key.name});
+		
+		if (entity == null) {
+			throw new IllegalArgumentException("${entity.class} not found: ${key.name} is [" + ${key.name} + "]");
+		}
+		
+		return entity;
+	}
+	
+	public List<${entity.class}> list() {
+		${entity.class}_ ${entity.name}_ = metamodel(${entity.class}.class);
+		return session.get(${entity.name}_).execute();
+	}
+	
+	@Transactional
+	public void put(${entity.class} ${entity.name}) {
+		session.put(${entity.name});
+	}
+	
+	@Transactional
+	public void update(${key.class} ${key.name}, ${entity.class} ${entity.name}) {
+		${entity.class} entity = session.get(${entity.class}.class, ${key.name});
+		
+		if (entity == null) {
+			throw new IllegalArgumentException("${entity.class} not found: ${key.name} is [" + ${key.name} + "]");
+		}
+		
+		entity = ${entity.name};
+		session.update(entity);
+	}
+	
+	@Transactional
+	public void delete(${key.class} ${key.name}) {
+		${entity.class} entity = session.get(${entity.class}.class, ${key.name});
+		
+		if (entity == null) {
+			throw new IllegalArgumentException("${entity.class} not found: ${key.name} is [" + ${key.name} + "]");
+		}
+		
+		session.delete(entity);
+	}
+	
+}

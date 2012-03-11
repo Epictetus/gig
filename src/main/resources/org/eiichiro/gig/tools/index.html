@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/${entity.name}.css" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+function list(callback) {
+	$('#content').load('list.html', function() {
+		construct();
+		
+		if (callback) {
+			callback();
+		}
+	});
+}
+
+function create() {
+	$('#content').load('create.html', function() {
+		construct();
+	});
+}
+
+function show(${key.name}) {
+	$('#content').load('show.html', function() {
+		construct(${key.name});
+	});
+}
+
+function edit(${key.name}) {
+	$('#content').load('edit.html', function() {
+		construct(${key.name});
+	});
+}
+
+$(function() {
+	$.ajaxSetup({
+		cache: false
+	});
+	list();
+});
+</script>
+<title>${entity.class}</title>
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1>${entity.class}</h1>
+<div class="poweredby">Powered by <a href="http://gig.eiichiro.org/">Gig</a> Scaffolding</div>
+</div>
+<div id="content"></div>
+</div>
+</body>
+</html>

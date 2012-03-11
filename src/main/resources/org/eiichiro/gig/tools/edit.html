@@ -1,0 +1,34 @@
+<div id="content-description"><h2>Edit ${entity.class}</h2></div>
+<div id="content-main">
+<div id="content-main-header">
+<div id="content-main-message"></div>
+<div id="content-main-link">
+<span><a onclick="list()">È BACK TO LIST</a></span>
+</div>
+<div class="clear"></div>
+</div>
+${edit.html.content}
+<div id="content-main-footer">
+<div class="content-main-button"><button onclick="update()">UPDATE</button></div>
+</div>
+</div>
+<script>
+function construct(${key.name}) {
+	$.getJSON('get', {
+		${key.name}: ${key.name}
+	}, function(data) {
+${edit.html.data}
+	}).error(function(request, status, message) {
+		$('#content-main-message').removeClass().addClass('content-main-message-error').text('Oops! ' + message);
+	});
+}
+function update() {
+	$.post('update', {
+${edit.html.post}
+	}, function() {
+		$('#content-main-message').removeClass().addClass('content-main-message-success').text('Successfully updated');
+	}).error(function(request, status, message) {
+		$('#content-main-message').removeClass().addClass('content-main-message-error').text('Oops! ' + message);
+	});
+}
+</script>
