@@ -19,7 +19,7 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import org.eiichiro.jazzmaster.Stereotype;
+import org.eiichiro.jaguar.Stereotype;
 
 /**
  * {@code Service} is a built-in stereotype to represent 

@@ -19,7 +19,7 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import org.eiichiro.jazzmaster.interceptor.Intercept;
+import org.eiichiro.jaguar.interceptor.Intercept;
 
 /**
  * {@code Transactional} is a intercept annotation to control Acid Houses' NoSQL 

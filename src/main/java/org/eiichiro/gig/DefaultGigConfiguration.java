@@ -15,12 +15,12 @@
  */
 package org.eiichiro.gig;
 
-import static org.eiichiro.jazzmaster.Jazzmaster.*;
+import static org.eiichiro.jaguar.Jaguar.*;
 
 import java.util.Set;
 
-import org.eiichiro.jazzmaster.Module;
-import org.eiichiro.jazzmaster.deployment.Production;
+import org.eiichiro.jaguar.Module;
+import org.eiichiro.jaguar.deployment.Production;
 import org.eiichiro.monophony.DefaultConfiguration;
 import org.eiichiro.monophony.Instantiator;
 import org.eiichiro.monophony.Loader;
@@ -88,10 +88,10 @@ public class DefaultGigConfiguration extends DefaultConfiguration implements Gig
 	
 	/**
 	 * Returns the {@code Instantiator} which instantiates an Web endpoint 
-	 * class with Jazzmaster.
+	 * class with Jaguar.
 	 * 
 	 * @return The {@code Instantiator} which instantiates an Web endpoint 
-	 * class with Jazzmaster.
+	 * class with Jaguar.
 	 */
 	public synchronized Instantiator instantiator() {
 		if (instantiator == null) {

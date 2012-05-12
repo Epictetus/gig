@@ -1,7 +1,7 @@
 package org.eiichiro.gig;
 
-import org.eiichiro.jazzmaster.Description;
-import org.eiichiro.jazzmaster.scope.Context;
+import org.eiichiro.jaguar.Description;
+import org.eiichiro.jaguar.scope.Context;
 
 public class Scope1Context implements Context {
 

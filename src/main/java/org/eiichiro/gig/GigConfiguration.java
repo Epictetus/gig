@@ -15,7 +15,7 @@
  */
 package org.eiichiro.gig;
 
-import org.eiichiro.jazzmaster.Module;
+import org.eiichiro.jaguar.Module;
 import org.eiichiro.monophony.Configuration;
 
 /**

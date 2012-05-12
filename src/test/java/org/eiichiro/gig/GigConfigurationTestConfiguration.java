@@ -1,6 +1,6 @@
 package org.eiichiro.gig;
 
-import org.eiichiro.jazzmaster.Module;
+import org.eiichiro.jaguar.Module;
 
 public class GigConfigurationTestConfiguration extends DefaultGigConfiguration {
 

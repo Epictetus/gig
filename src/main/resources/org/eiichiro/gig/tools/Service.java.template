@@ -9,7 +9,7 @@ import javax.annotation.Generated;
 import org.eiichiro.acidhouse.DatastoreSession;
 import org.eiichiro.gig.Service;
 import org.eiichiro.gig.Transactional;
-import org.eiichiro.jazzmaster.inject.Inject;
+import org.eiichiro.jaguar.inject.Inject;
 ${key.import}
 @Generated("org.eiichiro.gig.tools.ScaffoldGenerator")
 @Service

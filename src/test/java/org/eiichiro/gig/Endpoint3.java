@@ -1,6 +1,6 @@
 package org.eiichiro.gig;
 
-import org.eiichiro.jazzmaster.WebFilter;
+import org.eiichiro.jaguar.WebFilter;
 import org.eiichiro.monophony.annotation.Endpoint;
 
 @Endpoint

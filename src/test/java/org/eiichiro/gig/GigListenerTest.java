@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.testing.ServletTester;
-import org.eiichiro.jazzmaster.Jazzmaster;
+import org.eiichiro.jaguar.Jaguar;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +52,7 @@ public class GigListenerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			Jazzmaster.shutdown();
+			Jaguar.shutdown();
 		}
 		
 		initParams = new HashMap<String, String>();
@@ -66,7 +66,7 @@ public class GigListenerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			Jazzmaster.shutdown();
+			Jaguar.shutdown();
 		}
 	}
 
@@ -93,22 +93,22 @@ public class GigListenerTest {
 		initParams.put(GigListener.SETTINGS, GigConfigurationTestConfiguration.class.getName());
 		tester.getContext().setInitParams(initParams);
 		tester.start();
-		assertFalse(Jazzmaster.installed(Endpoint1.class));
-		assertFalse(Jazzmaster.installed(Endpoint2.class));
-		assertTrue(Jazzmaster.installed(Endpoint3.class));
-		assertFalse(Jazzmaster.installed(Endpoint4.class));
-		assertFalse(Jazzmaster.installed(Object1.class));
-		assertFalse(Jazzmaster.installed(Object2.class));
-		assertTrue(Jazzmaster.installed(Object3.class));
-		assertFalse(Jazzmaster.installed(Object4.class));
-		assertTrue(Jazzmaster.installed(Object5.class));
-		assertTrue(Jazzmaster.installed(Object6.class));
-		assertTrue(Jazzmaster.installed(Object7.class));
-		assertFalse(Jazzmaster.installed(Object8.class));
-		assertFalse(Jazzmaster.installed(Object9.class));
-		assertFalse(Jazzmaster.installed(Component1.class));
-		assertTrue(Jazzmaster.installed(Component2.class));
-		assertFalse(Jazzmaster.installed(Component3.class));
+		assertFalse(Jaguar.installed(Endpoint1.class));
+		assertFalse(Jaguar.installed(Endpoint2.class));
+		assertTrue(Jaguar.installed(Endpoint3.class));
+		assertFalse(Jaguar.installed(Endpoint4.class));
+		assertFalse(Jaguar.installed(Object1.class));
+		assertFalse(Jaguar.installed(Object2.class));
+		assertTrue(Jaguar.installed(Object3.class));
+		assertFalse(Jaguar.installed(Object4.class));
+		assertTrue(Jaguar.installed(Object5.class));
+		assertTrue(Jaguar.installed(Object6.class));
+		assertTrue(Jaguar.installed(Object7.class));
+		assertFalse(Jaguar.installed(Object8.class));
+		assertFalse(Jaguar.installed(Object9.class));
+		assertFalse(Jaguar.installed(Component1.class));
+		assertTrue(Jaguar.installed(Component2.class));
+		assertFalse(Jaguar.installed(Component3.class));
 		tester.stop();
 	}
 

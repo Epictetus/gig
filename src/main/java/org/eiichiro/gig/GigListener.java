@@ -21,8 +21,8 @@ import java.lang.reflect.Modifier;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 
-import org.eiichiro.jazzmaster.Jazzmaster;
-import org.eiichiro.jazzmaster.WebListener;
+import org.eiichiro.jaguar.Jaguar;
+import org.eiichiro.jaguar.WebListener;
 import org.eiichiro.reverb.lang.UncheckedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -91,14 +91,14 @@ public class GigListener extends WebListener {
 	}
 	
 	/**
-	 * Installs service component classes to the Jazzmaster container from the 
+	 * Installs service component classes to the Jaguar container from the 
 	 * {@link Module} which the {@code GigConfiguration#module()} returns.
 	 * 
 	 * @param context {@code ServletContext}.
 	 */
 	@Override
 	protected void install(ServletContext context) {
-		Jazzmaster.install(Sets.filter(configuration.module().components(), new Predicate<Class<?>>() {
+		Jaguar.install(Sets.filter(configuration.module().components(), new Predicate<Class<?>>() {
 
 			@Override
 			public boolean apply(Class<?> clazz) {

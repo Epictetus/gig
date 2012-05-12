@@ -5,9 +5,9 @@ import static org.hamcrest.CoreMatchers.*;
 
 import java.util.Set;
 
-import org.eiichiro.jazzmaster.Jazzmaster;
-import org.eiichiro.jazzmaster.Module;
-import org.eiichiro.jazzmaster.deployment.Production;
+import org.eiichiro.jaguar.Jaguar;
+import org.eiichiro.jaguar.Module;
+import org.eiichiro.jaguar.deployment.Production;
 import org.eiichiro.monophony.Instantiator;
 import org.eiichiro.monophony.Loader;
 import org.junit.After;
@@ -40,8 +40,8 @@ public class DefaultGigConfigurationTest {
 
 	@Test
 	public void testInstantiator() {
-		Jazzmaster.bootstrap();
-		Jazzmaster.install(Endpoint3.class);
+		Jaguar.bootstrap();
+		Jaguar.install(Endpoint3.class);
 		DefaultGigConfiguration configuration = new DefaultGigConfiguration();
 		Instantiator instantiator = configuration.instantiator();
 		assertNotNull(instantiator.instantiate(Endpoint3.class));
@@ -49,7 +49,7 @@ public class DefaultGigConfigurationTest {
 		assertNotNull(instantiator.instantiate(Endpoint2.class));
 		assertNull(instantiator.instantiate(Object3.class));
 		assertSame(instantiator, configuration.instantiator());
-		Jazzmaster.shutdown();
+		Jaguar.shutdown();
 	}
 
 	@Test

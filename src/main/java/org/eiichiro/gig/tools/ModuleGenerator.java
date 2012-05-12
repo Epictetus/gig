@@ -28,12 +28,12 @@ import java.util.Set;
 import javassist.CtClass;
 
 import org.eiichiro.gig.Main;
-import org.eiichiro.jazzmaster.Builtin;
-import org.eiichiro.jazzmaster.Component;
-import org.eiichiro.jazzmaster.Stereotype;
-import org.eiichiro.jazzmaster.deployment.Deployment;
-import org.eiichiro.jazzmaster.inject.Binding;
-import org.eiichiro.jazzmaster.scope.Scope;
+import org.eiichiro.jaguar.Builtin;
+import org.eiichiro.jaguar.Component;
+import org.eiichiro.jaguar.Stereotype;
+import org.eiichiro.jaguar.deployment.Deployment;
+import org.eiichiro.jaguar.inject.Binding;
+import org.eiichiro.jaguar.scope.Scope;
 import org.eiichiro.monophony.CtClassClassResolver;
 import org.eiichiro.monophony.annotation.Endpoint;
 import org.eiichiro.reverb.lang.ClassResolver;

@@ -1,6 +1,6 @@
 package org.eiichiro.gig;
 
-import org.eiichiro.jazzmaster.Component;
+import org.eiichiro.jaguar.Component;
 
 public class Component2 extends Component<ComponentType> {
 

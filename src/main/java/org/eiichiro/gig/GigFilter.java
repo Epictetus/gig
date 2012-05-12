@@ -24,7 +24,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.eiichiro.jazzmaster.WebFilter;
+import org.eiichiro.jaguar.WebFilter;
 import org.eiichiro.monophony.MonophonyFilter;
 import org.eiichiro.monophony.Configuration;
 

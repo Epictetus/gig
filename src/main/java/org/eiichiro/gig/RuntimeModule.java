@@ -22,13 +22,13 @@ import java.util.Set;
 
 import javassist.CtClass;
 
-import org.eiichiro.jazzmaster.Builtin;
-import org.eiichiro.jazzmaster.Component;
-import org.eiichiro.jazzmaster.Module;
-import org.eiichiro.jazzmaster.Stereotype;
-import org.eiichiro.jazzmaster.deployment.Deployment;
-import org.eiichiro.jazzmaster.inject.Binding;
-import org.eiichiro.jazzmaster.scope.Scope;
+import org.eiichiro.jaguar.Builtin;
+import org.eiichiro.jaguar.Component;
+import org.eiichiro.jaguar.Module;
+import org.eiichiro.jaguar.Stereotype;
+import org.eiichiro.jaguar.deployment.Deployment;
+import org.eiichiro.jaguar.inject.Binding;
+import org.eiichiro.jaguar.scope.Scope;
 import org.eiichiro.monophony.CtClassClassResolver;
 import org.eiichiro.monophony.annotation.Endpoint;
 import org.eiichiro.reverb.lang.ClassResolver;
@@ -126,7 +126,7 @@ public class RuntimeModule implements Module {
 	/**
 	 * Returns the components loaded from the runtime classpath.
 	 * The components consist of Web endpoint interfaces, Web endpoint abstract 
-	 * classes, Web endpoint concrete classes and Jazzmaster component classes.
+	 * classes, Web endpoint concrete classes and Jaguar component classes.
 	 * 
 	 * @return The components loaded from the runtime classpath.
 	 */
