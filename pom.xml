@@ -104,7 +104,7 @@
   	<dependency>
   		<groupId>org.eiichiro.acidhouse</groupId>
   		<artifactId>acidhouse</artifactId>
-  		<version>0.6.0</version>
+  		<version>0.6.1</version>
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>
