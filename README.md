@@ -1,9 +1,9 @@
 Gig
 ===
 Gig is a Java application framework developed by Eiichiro Uchiumi which is 
-including the full-stack runtime and toolkit can be performed on JDK 6 or later. 
-Gig offers a full set of development tools to build, deploy and maintain your 
-Java applications more easily, quickly and safely.
+including the best of breed full-stack runtime and toolkit can be performed on 
+JDK 6 or later. Gig is offering a full set of development tools to build, deploy 
+and maintain your Java applications more easily and quickly.
 
 Documentation
 -------------
@@ -15,8 +15,12 @@ Mailing Lists
 
 Subprojects
 -----------
+* [Gig Tools](https://github.com/eiichiro/gig-tools)
+* [Gig JPA](https://github.com/eiichiro/gig-jpa)
 * [Gig App Engine](https://github.com/eiichiro/gig-appengine)
+* [Gig Acid House App Engine](https://github.com/eiichiro/gig-acidhouse-appengine)
 * [Gig Heroku](https://github.com/eiichiro/gig-heroku)
+* [Gig JPA Heroku Postgres](https://github.com/eiichiro/gig-jpa-heroku-postgres)
 * [Gig Webapp Maven Archetype](https://github.com/eiichiro/gig-archetype-webapp)
 * [Gig App Engine Webapp Maven Archetype](https://github.com/eiichiro/gig-archetype-appengine)
 * [Gig Heroku Webapp Maven Archetype](https://github.com/eiichiro/gig-archetype-heroku)

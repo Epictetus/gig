@@ -38,11 +38,11 @@ import com.google.common.collect.Sets;
  */
 public class GigListener extends WebListener {
 
-	public static final String SETTINGS = "org.eiichiro.gig.configuration";
+	public static final String CONFIGURATION = "org.eiichiro.gig.configuration";
 	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 	
-	private GigConfiguration configuration;
+	private Configuration configuration;
 	
 	static {
 		Logger logger = LoggerFactory.getLogger(Version.class);
@@ -51,39 +51,39 @@ public class GigListener extends WebListener {
 	}
 	
 	/**
-	 * Loads the {@link GigConfiguration} specified by the deployment descriptor and 
+	 * Loads the {@link Configuration} specified by the deployment descriptor and 
 	 * sets it to the {@code ServletContext}.
-	 * If no {@code GigConfiguration} is specified, this method uses 
-	 * {@link DefaultGigConfiguration}.
+	 * If no {@code Configuration} is specified, this method uses 
+	 * {@link DefaultConfiguration}.
 	 * 
 	 * @param sce {@code ServletContextEvent}.
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		String clazz = sce.getServletContext().getInitParameter(SETTINGS);
-		GigConfiguration configuration = null;
+		String clazz = sce.getServletContext().getInitParameter(CONFIGURATION);
+		Configuration configuration = null;
 		
 		if (clazz == null) {
-			configuration = new DefaultGigConfiguration();
+			configuration = new DefaultConfiguration();
 		} else {
 			try {
-				configuration = (GigConfiguration) Class.forName(clazz).newInstance();
+				configuration = (Configuration) Class.forName(clazz).newInstance();
 			} catch (Exception e) {
 				logger.error("Failed to load configuration", e);
 				throw new UncheckedException(e);
 			}
 		}
 		
-		sce.getServletContext().setAttribute(GigConfiguration.class.getName(), configuration);
+		sce.getServletContext().setAttribute(CONFIGURATION, configuration);
 		this.configuration = configuration;
 		super.contextInitialized(sce);
 	}
 	
 	/**
-	 * Returns the deployment qualifier from the {@code GigConfiguration} loaded.
+	 * Returns the deployment qualifier from the {@code Configuration} loaded.
 	 * 
 	 * @param context {@code ServletContext}.
-	 * @return The deployment qualifier from the {@code GigConfiguration} loaded.
+	 * @return The deployment qualifier from the {@code Configuration} loaded.
 	 */
 	@Override
 	protected Class<?> deployment(ServletContext context) {
@@ -92,7 +92,7 @@ public class GigListener extends WebListener {
 	
 	/**
 	 * Installs service component classes to the Jaguar container from the 
-	 * {@link Module} which the {@code GigConfiguration#module()} returns.
+	 * {@link Module} which the {@code Configuration#module()} returns.
 	 * 
 	 * @param context {@code ServletContext}.
 	 */

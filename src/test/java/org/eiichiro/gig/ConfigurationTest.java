@@ -7,7 +7,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class GigConfigurationTest {
+public class ConfigurationTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -19,14 +19,14 @@ public class GigConfigurationTest {
 
 	@Test
 	public void testDeployment() {
-		GigConfiguration configuration = new GigConfigurationTestConfiguration();
+		Configuration configuration = new ConfigurationTestConfiguration();
 		assertThat(configuration.deployment(), is((Object) Deployment1.class));
 	}
 
 	@Test
 	public void testModule() {
-		GigConfiguration configuration = new GigConfigurationTestConfiguration();
-		assertThat(configuration.module(), instanceOf(GigConfigurationTestModule.class));
+		Configuration configuration = new ConfigurationTestConfiguration();
+		assertThat(configuration.module(), instanceOf(ConfigurationTestModule.class));
 	}
 
 }

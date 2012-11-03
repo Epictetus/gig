@@ -31,6 +31,6 @@ public class Version {
 	public static final int MINER = 4;
 	
 	/** Serial build version for this build. */
-	public static final int BUILD = 0;
+	public static final int BUILD = 2;
 	
 }

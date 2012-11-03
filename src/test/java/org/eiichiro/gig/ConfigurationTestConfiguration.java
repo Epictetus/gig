@@ -2,7 +2,7 @@ package org.eiichiro.gig;
 
 import org.eiichiro.jaguar.Module;
 
-public class GigConfigurationTestConfiguration extends DefaultGigConfiguration {
+public class ConfigurationTestConfiguration extends DefaultConfiguration {
 
 	@Override
 	public Class<?> deployment() {
@@ -11,7 +11,7 @@ public class GigConfigurationTestConfiguration extends DefaultGigConfiguration {
 
 	@Override
 	public Module module() {
-		return new GigConfigurationTestModule();
+		return new ConfigurationTestModule();
 	}
 
 }

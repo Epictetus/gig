@@ -86,32 +86,24 @@
   		</plugins>
   	</pluginManagement>
   </build>
+  <repositories>
+	  <repository>
+	  	<id>EclipseLink Repo</id>
+	  	<url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
+	  </repository>
+  </repositories>
   <dependencies>
   	<dependency>
   		<groupId>org.eiichiro.jaguar</groupId>
   		<artifactId>jaguar</artifactId>
-  		<version>2.0-rc3</version>
+  		<version>2.0-rc4</version>
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>
   	<dependency>
   		<groupId>org.eiichiro.monophony</groupId>
   		<artifactId>monophony</artifactId>
-  		<version>0.3.1</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.eiichiro.acidhouse</groupId>
-  		<artifactId>acidhouse</artifactId>
-  		<version>0.6.1</version>
-  		<type>jar</type>
-  		<scope>compile</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.eiichiro.acidhouse</groupId>
-  		<artifactId>acidhouse-modelgen</artifactId>
-  		<version>0.6.0</version>
+  		<version>0.4.0</version>
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>

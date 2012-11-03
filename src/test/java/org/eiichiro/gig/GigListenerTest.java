@@ -31,18 +31,18 @@ public class GigListenerTest {
 		tester.addEventListener(new GigListener());
 		tester.addServlet(DefaultServlet.class, "/");
 		tester.start();
-		assertThat(tester.getContext().getServletContext().getAttribute(GigConfiguration.class.getName()), instanceOf(DefaultGigConfiguration.class));
+		assertThat(tester.getContext().getServletContext().getAttribute(GigListener.CONFIGURATION), instanceOf(DefaultConfiguration.class));
 		tester.stop();
 		
 		Map<String, String> initParams = new HashMap<String, String>();
-		initParams.put(GigListener.SETTINGS, GigConfigurationTestConfiguration.class.getName());
+		initParams.put(GigListener.CONFIGURATION, ConfigurationTestConfiguration.class.getName());
 		tester.getContext().setInitParams(initParams);
 		tester.start();
-		assertThat(tester.getContext().getServletContext().getAttribute(GigConfiguration.class.getName()), instanceOf(GigConfigurationTestConfiguration.class));
+		assertThat(tester.getContext().getServletContext().getAttribute(GigListener.CONFIGURATION), instanceOf(ConfigurationTestConfiguration.class));
 		tester.stop();
 		
 		initParams = new HashMap<String, String>();
-		initParams.put(GigListener.SETTINGS, GigListenerTest.class.getName());
+		initParams.put(GigListener.CONFIGURATION, GigListenerTest.class.getName());
 		tester.getContext().setInitParams(initParams);
 		tester.start();
 		assertTrue(tester.getContext().isFailed());
@@ -56,7 +56,7 @@ public class GigListenerTest {
 		}
 		
 		initParams = new HashMap<String, String>();
-		initParams.put(GigListener.SETTINGS, "org.eiichiro.gig.NotFound");
+		initParams.put(GigListener.CONFIGURATION, "org.eiichiro.gig.NotFound");
 		tester.getContext().setInitParams(initParams);
 		tester.start();
 		assertTrue(tester.getContext().isFailed());
@@ -77,7 +77,7 @@ public class GigListenerTest {
 		tester.addEventListener(listener);
 		tester.addServlet(DefaultServlet.class, "/");
 		Map<String, String> initParams = new HashMap<String, String>();
-		initParams.put(GigListener.SETTINGS, GigConfigurationTestConfiguration.class.getName());
+		initParams.put(GigListener.CONFIGURATION, ConfigurationTestConfiguration.class.getName());
 		tester.getContext().setInitParams(initParams);
 		tester.start();
 		assertThat(listener.deployment(tester.getContext().getServletContext()), is((Object) Deployment1.class));
@@ -90,7 +90,7 @@ public class GigListenerTest {
 		tester.addEventListener(new GigListener());
 		tester.addServlet(DefaultServlet.class, "/");
 		Map<String, String> initParams = new HashMap<String, String>();
-		initParams.put(GigListener.SETTINGS, GigConfigurationTestConfiguration.class.getName());
+		initParams.put(GigListener.CONFIGURATION, ConfigurationTestConfiguration.class.getName());
 		tester.getContext().setInitParams(initParams);
 		tester.start();
 		assertFalse(Jaguar.installed(Endpoint1.class));

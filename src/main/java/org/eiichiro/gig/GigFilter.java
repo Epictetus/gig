@@ -30,7 +30,7 @@ import org.eiichiro.monophony.Configuration;
 
 /**
  * {@code GigFilter} is a {@code MonophonyFilter} extension for Gig to setup 
- * Web contexts and Web endpoints from {@code GigConfiguration}.
+ * Web contexts and Web endpoints from {@code Configuration}.
  * 
  * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
  */
@@ -60,21 +60,21 @@ public class GigFilter extends MonophonyFilter {
 	}
 	
 	/**
-	 * Returns the {@link GigConfiguration} specified by the deployment descriptor.
-	 * If no {@code GigConfiguration} is specified, this method returns 
-	 * {@link DefaultGigConfiguration}.
+	 * Returns the {@link Configuration} specified by the deployment descriptor.
+	 * If no {@code Configuration} is specified, this method returns 
+	 * {@link DefaultConfiguration}.
 	 * 
 	 * @param config Servlet filter configuration.
-	 * @return The {@link GigConfiguration} specified by the deployment descriptor.
-	 * @throws ServletException If the {@code GigConfiguration} has not been set on 
+	 * @return The {@link Configuration} specified by the deployment descriptor.
+	 * @throws ServletException If the {@code Configuration} has not been set on 
 	 * the Servlet context.
 	 */
 	@Override
 	protected Configuration configuration(FilterConfig config) throws ServletException {
-		GigConfiguration configuration = (GigConfiguration) config.getServletContext().getAttribute(GigConfiguration.class.getName());
+		Configuration configuration = (Configuration) config.getServletContext().getAttribute(GigListener.CONFIGURATION);
 		
 		if (configuration == null) {
-			throw new ServletException("GigConfiguration has not been set on the Servlet context");
+			throw new ServletException("Configuration has not been set on the Servlet context");
 		}
 		
 		return configuration;
