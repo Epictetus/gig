@@ -86,12 +86,6 @@
   		</plugins>
   	</pluginManagement>
   </build>
-  <repositories>
-	  <repository>
-	  	<id>EclipseLink Repo</id>
-	  	<url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
-	  </repository>
-  </repositories>
   <dependencies>
   	<dependency>
   		<groupId>org.eiichiro.jaguar</groupId>
@@ -101,9 +95,9 @@
   		<scope>compile</scope>
   	</dependency>
   	<dependency>
-  		<groupId>org.eiichiro.monophony</groupId>
-  		<artifactId>monophony</artifactId>
-  		<version>0.4.0</version>
+  		<groupId>org.eiichiro.bootleg</groupId>
+  		<artifactId>bootleg</artifactId>
+  		<version>0.5.0</version>
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>

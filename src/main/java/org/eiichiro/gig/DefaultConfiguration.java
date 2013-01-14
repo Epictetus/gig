@@ -32,10 +32,10 @@ import org.eiichiro.jaguar.deployment.Deployment;
 import org.eiichiro.jaguar.deployment.Production;
 import org.eiichiro.jaguar.inject.Binding;
 import org.eiichiro.jaguar.scope.Scope;
-import org.eiichiro.monophony.CtClassClassResolver;
-import org.eiichiro.monophony.Instantiator;
-import org.eiichiro.monophony.Loader;
-import org.eiichiro.monophony.annotation.Endpoint;
+import org.eiichiro.bootleg.CtClassClassResolver;
+import org.eiichiro.bootleg.Instantiator;
+import org.eiichiro.bootleg.Loader;
+import org.eiichiro.bootleg.annotation.Endpoint;
 import org.eiichiro.reverb.lang.ClassResolver;
 import org.eiichiro.reverb.lang.UncheckedException;
 import org.eiichiro.reverb.lang.ClassResolver.Matcher;
@@ -52,7 +52,7 @@ import com.google.common.collect.Sets;
  * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
  */
 public class DefaultConfiguration extends
-		org.eiichiro.monophony.DefaultConfiguration implements Configuration {
+		org.eiichiro.bootleg.DefaultConfiguration implements Configuration {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 	
@@ -82,17 +82,6 @@ public class DefaultConfiguration extends
 		}
 		
 	};
-	
-	/**
-	 * Constructs a new {@code DefaultConfiguration} instance.
-	 * Instantiates {@code org.eiichiro.gig.Module_} (the {@code Module} 
-	 * implementation that the 'modgen' tool generates) if it could be found on 
-	 * the classpath. If it could not be found, this method instantiates an 
-	 * anonymous {@code Module} instance which scans components from runtime 
-	 * classpath.
-	 */
-	public DefaultConfiguration() {
-	}
 	
 	/**
 	 * Returns {@code Production}.
@@ -129,7 +118,6 @@ public class DefaultConfiguration extends
 			throw new UncheckedException(e);
 		}
 		
-		logger.debug("Slow? Generate module class on ahead with 'modgen' CLI tool to make the spinup faster");
 		final Set<Class<?>> components = new HashSet<Class<?>>();
 		
 		try {
@@ -186,6 +174,7 @@ public class DefaultConfiguration extends
 					return false;
 				}
 			});
+			logger.debug("Slow? Generate module class on ahead with 'modgen' CLI tool to make the spinup faster");
 			
 			for (CtClass ctClass : ctClasses) {
 				try {

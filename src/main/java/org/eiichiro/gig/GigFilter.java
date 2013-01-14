@@ -25,16 +25,16 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.eiichiro.jaguar.WebFilter;
-import org.eiichiro.monophony.MonophonyFilter;
-import org.eiichiro.monophony.Configuration;
+import org.eiichiro.bootleg.BootlegFilter;
+import org.eiichiro.bootleg.Configuration;
 
 /**
- * {@code GigFilter} is a {@code MonophonyFilter} extension for Gig to setup 
+ * {@code GigFilter} is a {@code BootlegFilter} extension for Gig to setup 
  * Web contexts and Web endpoints from {@code Configuration}.
  * 
  * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
  */
-public class GigFilter extends MonophonyFilter {
+public class GigFilter extends BootlegFilter {
 
 	/**
 	 * Sets up Web context with {@code WebFilter} and runs HTTP request 

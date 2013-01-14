@@ -1,6 +1,6 @@
 package org.eiichiro.gig;
 
-import org.eiichiro.monophony.annotation.Endpoint;
+import org.eiichiro.bootleg.annotation.Endpoint;
 
 @Endpoint
 public abstract class Endpoint2 {}

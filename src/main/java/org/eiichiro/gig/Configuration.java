@@ -18,7 +18,7 @@ package org.eiichiro.gig;
 import org.eiichiro.jaguar.Module;
 
 /**
- * {@code Configuration} is the {@code Configuration} extension to specify the configuration 
+ * {@code Configuration} is the {@code org.eiichiro.bootleg.Configuration} extension to specify the configuration 
  * of Gig application.
  * You can specify your own custom {@code Configuration} as the 
  * {@code ServletContext}'s init parameter <code>'org.eiichiro.gig.configuration'</code> 
@@ -32,7 +32,7 @@ import org.eiichiro.jaguar.Module;
  * 
  * @author <a href="mailto:eiichiro@eiichiro.org">Eiichiro Uchiumi</a>
  */
-public interface Configuration extends org.eiichiro.monophony.Configuration {
+public interface Configuration extends org.eiichiro.bootleg.Configuration {
 
 	/**
 	 * Returns the deployment qualifier.
