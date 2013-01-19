@@ -15,15 +15,22 @@ Mailing Lists
 
 Subprojects
 -----------
-* [Gig Tools](https://github.com/eiichiro/gig-tools)
-* [Gig JPA](https://github.com/eiichiro/gig-jpa)
+### Component set
 * [Gig App Engine](https://github.com/eiichiro/gig-appengine)
-* [Gig Acid House App Engine](https://github.com/eiichiro/gig-acidhouse-appengine)
 * [Gig Heroku](https://github.com/eiichiro/gig-heroku)
+* [Gig JPA](https://github.com/eiichiro/gig-jpa)
 * [Gig JPA Heroku Postgres](https://github.com/eiichiro/gig-jpa-heroku-postgres)
+* [Gig Acid House App Engine](https://github.com/eiichiro/gig-acidhouse-appengine)
+
+### Tool
+* [Gig Tools](https://github.com/eiichiro/gig-tools)
+
+### Maven archetype
 * [Gig Webapp Maven Archetype](https://github.com/eiichiro/gig-archetype-webapp)
 * [Gig App Engine Webapp Maven Archetype](https://github.com/eiichiro/gig-archetype-appengine)
 * [Gig Heroku Webapp Maven Archetype](https://github.com/eiichiro/gig-archetype-heroku)
+
+### Eclipse plugin
 * [Gig Eclipse Plugin](https://github.com/eiichiro/org.eiichiro.gig)
 * [Gig Eclipse Plugin Core](https://github.com/eiichiro/org.eiichiro.gig.eclipse.core)
 * [Gig Eclipse Plugin UI](https://github.com/eiichiro/org.eiichiro.gig.eclipse.ui)
