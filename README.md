@@ -7,8 +7,8 @@ and maintain your Java applications more easily and quickly.
 
 Documentation
 -------------
-* [What is Gig?](gig/wiki)
-* [Getting Started](gig/wiki/Getting-Started)
+* [What is Gig?](https://github.com/eiichiro/gig/wiki)
+* [Getting Started](https://github.com/eiichiro/gig/wiki/Getting-Started)
 * [Javadoc](http://apidocs.eiichiro.org/gig/)
 
 Mailing Lists
